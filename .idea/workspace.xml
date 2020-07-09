@@ -20,7 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66a43ab4-d500-4abb-beed-ea00111c700d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/kyhslam/controller/SubjectController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/kyhslam/controller/CompanyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/kyhslam/controller/DaouController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/kyhslam/domain/ResponseAccountMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/kyhslam/domain/ResponseSubject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/kyhslam/controller/SubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/kyhslam/controller/SubjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/kyhslam/domain/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/kyhslam/domain/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/kyhslam/domain/RelatedSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/kyhslam/domain/RelatedSubject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/kyhslam/jpa/SubjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/kyhslam/jpa/SubjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kyhslam/controller/SubjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kyhslam/controller/SubjectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kyhslam/domain/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kyhslam/domain/Company.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/kyhslam/domain/RelatedSubject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/kyhslam/domain/RelatedSubject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/kyhslam/jpa/SubjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/kyhslam/jpa/SubjectTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +46,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -49,9 +63,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/org/kyhslam/domain" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -135,31 +150,44 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2360" y="94" key="#Project_Structure" timestamp="1594220734630">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2360" y="94" key="#Project_Structure/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594220734630" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1594222879785">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1594303883358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594222879785" />
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594303883358" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1594308551474">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594308551474" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594220916072" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1594222879785">
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1594308551474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594222879785" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594308551474" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594220916072" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1594222879785">
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1594308551474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594222879785" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594308551474" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594220916072" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1594222879785">
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1594308551474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594222879785" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594308551474" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594220916072" />
+    <state x="2109" y="62" width="1414" height="1028" maximized="true" key="dock-window-1" timestamp="1594304747175">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2109" y="62" width="1414" height="1028" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594304747175" />
+    <state x="1920" y="0" width="1414" height="1028" key="dock-window-2" timestamp="1594307463223">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1920" y="0" width="1414" height="1028" key="dock-window-2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594307463223" />
   </component>
 </project>

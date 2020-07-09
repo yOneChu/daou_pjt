@@ -21,6 +21,13 @@ public class SubjectTest {
     @Autowired
     CompanyRepository comRepo;
 
+    //@Test
+    public void testInsertCompany() {
+        Company company = new Company();
+        company.setName("bsnc");
+        comRepo.save(company);
+    }
+
     @Test
     public void testInsertSubject(){
 
@@ -33,9 +40,17 @@ public class SubjectTest {
 
         comRepo.save(com);
         subRepo.save(subject);
-
-
     }
 
+    @Test
+    public void selectComapny() {
+        Company com = comRepo.findById(1L).get();
+        System.out.println(com.getBno());
+        System.out.println(com.getName());
+        com.setSubjectList(subRepo.getSubjectOfCompany(com));
+
+        System.out.println(com.getSubjectList());
+
+    }
 
 }
