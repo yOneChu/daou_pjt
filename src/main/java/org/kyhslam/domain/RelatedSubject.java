@@ -32,6 +32,16 @@ public class RelatedSubject {
 
     private String accountCode; // 계정코드
 
+    private String subjectName; // 과목명(세목)
+
+    private String subject_; // 과목명(목)
+
+    private String type; // 분류
+
+    private String relatedCode; // 관계코드
+
+    private String relatedName; // 관계계정과목
+
     //불필요하게 양쪽 테이블을 조회하지 않도록 양쪽 모두 '지연로딩' 방식으로 설정
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
