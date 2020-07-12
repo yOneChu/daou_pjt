@@ -21,7 +21,9 @@ public class Company {
     
     private String name; // 회사명
 
-    @OneToMany(mappedBy = "company", fetch = FetchType.LAZY)
+    
+    // fetch = FetchType.LAZY 를 해준 이유는 해당 account에 연결된 subject가 몇개인지 모르기 때문이다. 만개 천만개 일수도 있기 때문에
+    @OneToMany(mappedBy = "company", fetch = FetchType.LAZY) 
     private List<RelatedSubject> subjectList;
 
     @CreationTimestamp
@@ -29,6 +31,8 @@ public class Company {
 
     @UpdateTimestamp
     private Timestamp updateDate; // 수정일
+
+    private Timestamp deletedate; // 삭제일일
 
     private Integer user_all; //사용자 총 계정수
 

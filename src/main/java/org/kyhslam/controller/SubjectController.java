@@ -40,6 +40,7 @@ public class SubjectController {
         Company company = new Company();
         company.setBno(bno);
 
+
         subject.setCompany(company);
 
         subRepo.save(subject);

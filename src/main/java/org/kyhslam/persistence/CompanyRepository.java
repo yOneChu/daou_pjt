@@ -2,7 +2,20 @@ package org.kyhslam.persistence;
 
 
 import org.kyhslam.domain.Company;
-import org.springframework.data.repository.CrudRepository;
+import org.kyhslam.domain.RelatedSubject;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
-public interface CompanyRepository extends CrudRepository<Company,Long> {
+import java.util.Collection;
+import java.util.List;
+
+
+public interface CompanyRepository extends JpaRepository<Company,Long> {
+
+
+    public List<Company> findByName(String name);
+
+    public Collection<Company> findByBno(Long id);
+
+
 }

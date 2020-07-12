@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SubjectTest {
@@ -28,7 +30,7 @@ public class SubjectTest {
         comRepo.save(company);
     }
 
-    @Test
+    //Test
     public void testInsertSubject(){
 
         Company com = new Company();
@@ -42,7 +44,7 @@ public class SubjectTest {
         subRepo.save(subject);
     }
 
-    @Test
+    //@Test
     public void selectComapny() {
         Company com = comRepo.findById(1L).get();
         System.out.println(com.getBno());
@@ -51,6 +53,30 @@ public class SubjectTest {
 
         System.out.println(com.getSubjectList());
 
+    }
+
+   // @Test
+    public void deleteCompany(){
+
+        List<Company> list =  comRepo.findByName("키움증권");
+
+        System.out.println(list.size());
+        for(int i=0; i < list.size(); i++){
+
+            Company com =list.get(i);
+
+            comRepo.delete(com);
+        }
+
+    }
+
+
+    @Test
+    public void selectRelatedCode(){
+        RelatedSubject subject =  subRepo.findByRelatedCode("100003");
+        System.out.println(subject.getAccountName());
+        Company company = subject.getCompany();
+        System.out.println(company.getName());
     }
 
 }

@@ -34,7 +34,7 @@ public class RelatedSubject {
 
     private String subjectName; // 과목명(세목)
 
-    private String subject_; // 과목명(목)
+    private String subject; // 과목명(목)
 
     private String type; // 분류
 
@@ -44,7 +44,7 @@ public class RelatedSubject {
 
     //불필요하게 양쪽 테이블을 조회하지 않도록 양쪽 모두 '지연로딩' 방식으로 설정
     @JsonIgnore
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne  // fetch = FetchType.LAZY 를 생략함 why? subject에 연결된 건 하나이기 때문에 해줘도된다.
     private Company company; // 회사코드
 
     @CreationTimestamp
@@ -52,4 +52,6 @@ public class RelatedSubject {
 
     @UpdateTimestamp
     private Timestamp updatedate; // 수정일
+    
+    private Timestamp deletedate; // 삭제일
 }
