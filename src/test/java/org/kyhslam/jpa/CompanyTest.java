@@ -24,13 +24,8 @@ public class CompanyTest {
     @Test
     public void selectOneTest(){
 
-        //List<Company> coms = companyRepository.findByName("다우기술");
-
-        //System.out.println(coms.size());
         Long bno = 2L;
-
         Company company = companyRepository.findById(bno).get();
-
         System.out.println(company.getName());
         
     }

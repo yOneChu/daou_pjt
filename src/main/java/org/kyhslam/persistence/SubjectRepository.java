@@ -17,4 +17,8 @@ public interface SubjectRepository extends JpaRepository<RelatedSubject, Long> {
 
     public RelatedSubject findByRelatedCode(String code);
 
+    //계정코드 다음값 구하기
+    @Query("SELECT r FROM RelatedSubject")
+    public Integer getMaxAccountCode();
+
 }

@@ -27,30 +27,19 @@ public class CompanyController {
     @Autowired
     SubjectRepository subRepo;
 
-/*    @GetMapping("/{bno}/list")
-    public ResponseEntity<List<RelatedSubject>> list(@PathVariable("bno") Long bno){
-        Company company = new Company();
-        company.setBno(bno);
-        return new ResponseEntity<>(getListByCompany(company), HttpStatus.ACCEPTED);
-    }*/
-
 
     // 회사 조회 (계정과목 포함)
     @GetMapping("/{bno}/list")
     public ResponseAccountMessage list(@PathVariable("bno") Long bno){
-        //Company company = new Company();
-        //company.setBno(bno);
 
         Company company = comRepo.findById(bno).get();
         company.setSubjectList(subRepo.getSubjectOfCompany(company));
 
-        //HashMap<String, Object> map = new HashMap<>();
-
         ResponseAccountMessage message = new ResponseAccountMessage(HttpStatus.OK);
         message.setCompany(company);
 
+        logger.info("message === "  +message);
 
-        //getSubjectOfCompany
         return message;
     }
 
@@ -63,6 +52,8 @@ public class CompanyController {
     //회사 수정
     @PutMapping("/{bno}/update")
     public ResponseAccountMessage update(@PathVariable("bno") Long bno, @RequestBody Company company) {
+
+        logger.info("bno === "  +bno);
 
         ResponseAccountMessage message = new ResponseAccountMessage(HttpStatus.OK);
         Company com = comRepo.findById(bno).get();
@@ -81,6 +72,7 @@ public class CompanyController {
     //회사 추가
     @PostMapping("/add")
     public ResponseAccountMessage add(@RequestBody Company company) {
+        logger.info("company === "  +company);
 
         ResponseAccountMessage message = new ResponseAccountMessage(HttpStatus.CREATED);
         comRepo.save(company);
@@ -92,8 +84,6 @@ public class CompanyController {
     @DeleteMapping("/{bno}/delete")
     public void delete(@PathVariable("bno") Long bno) {
         ResponseAccountMessage message = new ResponseAccountMessage(HttpStatus.OK);
-        //Company com = new Company();
-        //com.setBno(bno);
 
         Company com = comRepo.findById(bno).get();
         comRepo.delete(com);

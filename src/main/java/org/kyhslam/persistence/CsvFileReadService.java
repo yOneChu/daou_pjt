@@ -23,9 +23,6 @@ public class CsvFileReadService {
     CompanyRepository companyRepository;
 
 
-
-
-
     public void compayFileRead(String isDir) throws Exception {
 
         ArrayList<String[]> list = new ArrayList<>();
@@ -124,10 +121,14 @@ public class CsvFileReadService {
                     logger.info("file.getAbsoluteFile() == " + file.getAbsoluteFile());
                     logger.info("file.getName() == " + file.getName());
 
+
                     if(file.getName().contains("account")){
 
                         subjectInsert(file);
 
+                    }else{
+
+                        companyInsert(file);
                     }
 
                     BufferedReader bufferedReader = new BufferedReader(
