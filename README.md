@@ -1,5 +1,5 @@
 # daou_pjt
-**환경 : intelliJ, PostgreSQL, Springboot, JPA, opencsv **
+**환경 : intelliJ, PostgreSQL, Springboot, JPA**
 
 
 ## 환경설정 ##
@@ -8,4 +8,8 @@
 - 명령어
 > docker run -p 5432:5432 -e POSTGRES_PASSWORD=pass -e POSTGRES_USER=kyhslam -e POSTGRES_DB=springboot --name postgres_boot -d postgres
 
-2. 소스를 받은 후, org.kyhslam.Application.java 를 Run
+### 과제1###
+- 소스를 받은 후, org.kyhslam.Application.java 를 Run
+
+### 과제2 ###
+- File 실행
