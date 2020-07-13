@@ -38,7 +38,7 @@ public class SubjectTest {
 
         RelatedSubject subject = new RelatedSubject();
         subject.setCompany(com);
-        subject.setAccountCode("13100");
+        subject.setAccountCode(13100);
 
         comRepo.save(com);
         subRepo.save(subject);
@@ -71,12 +71,18 @@ public class SubjectTest {
     }
 
 
-    @Test
+    //@Test
     public void selectRelatedCode(){
-        RelatedSubject subject =  subRepo.findByRelatedCode("100003");
+        RelatedSubject subject =  subRepo.findByRelatedCode(100003);
         System.out.println(subject.getAccountName());
         Company company = subject.getCompany();
         System.out.println(company.getName());
+    }
+
+    @Test
+    public void selectnext(){
+        Integer aa =   subRepo.getAccountNextValCode();
+        System.out.println(aa);
     }
 
 }

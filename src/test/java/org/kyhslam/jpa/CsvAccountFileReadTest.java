@@ -88,14 +88,14 @@ public class CsvAccountFileReadTest {
                     RelatedSubject subject = new RelatedSubject();
 
                     subject.setAccountName( a[4] == null ? "" : a[4] ); // 계정체계
-                    subject.setAccountCode( a[5] ); // 계정코드
+                    subject.setAccountCode(  Integer.parseInt(a[5] )); // 계정코드
                     subject.setSubjectName( a[6] ); // 과목명(세목)
                     subject.setSubject( a[7] ); // 과목명(목)
 
 
 
                     subject.setType( a[8] == null ? "" : a[8] ); // 분류관계
-                    subject.setRelatedCode( a[9] == null ? "" : a[9] ); // 코드관계
+                    subject.setRelatedCode( a[9] == null ? 0 : Integer.parseInt(a[9]) ); // 코드관계
                     subject.setRelatedName( a[10] == null ? "" : a[10] ); // 계정과목명
 
 

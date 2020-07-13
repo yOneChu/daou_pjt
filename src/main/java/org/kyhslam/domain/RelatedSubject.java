@@ -30,7 +30,7 @@ public class RelatedSubject {
 
     private String accountName; // 계정체계
 
-    private String accountCode; // 계정코드
+    private Integer accountCode; // 계정코드
 
     private String subjectName; // 과목명(세목)
 
@@ -38,7 +38,7 @@ public class RelatedSubject {
 
     private String type; // 분류
 
-    private String relatedCode; // 관계코드
+    private Integer relatedCode; // 관계코드
 
     private String relatedName; // 관계계정과목
 

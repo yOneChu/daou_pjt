@@ -3,7 +3,9 @@ package org.kyhslam.controller;
 import org.kyhslam.domain.Company;
 import org.kyhslam.domain.RelatedSubject;
 import org.kyhslam.domain.ResponseAccountMessage;
+import org.kyhslam.persistence.ComThread;
 import org.kyhslam.persistence.CompanyRepository;
+import org.kyhslam.persistence.SubThread;
 import org.kyhslam.persistence.SubjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -87,6 +89,25 @@ public class CompanyController {
 
         Company com = comRepo.findById(bno).get();
         comRepo.delete(com);
+        return;
+    }
+
+    @GetMapping("/upload")
+    public void upload() {
+
+        SubThread a = new SubThread("account", "C:\\csvFile");
+        ComThread b = new ComThread("company", "C:\\csvFile");
+
+
+        //Integer aa = subRepo.getAccountNextValCode();
+        //System.out.println(aa);
+
+
+        //Thread t1 = new Thread(a, "sub");
+        Thread t2 = new Thread(b, "com");
+        //t1.start();
+        t2.start();
+
         return;
     }
 }

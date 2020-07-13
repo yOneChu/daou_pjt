@@ -15,10 +15,10 @@ public interface SubjectRepository extends JpaRepository<RelatedSubject, Long> {
     public List<RelatedSubject> getSubjectOfCompany(Company company);
 
 
-    public RelatedSubject findByRelatedCode(String code);
+    public RelatedSubject findByRelatedCode(Integer code);
 
     //계정코드 다음값 구하기
-    @Query("SELECT r FROM RelatedSubject")
-    public Integer getMaxAccountCode();
+    @Query("SELECT (max(a.accountCode) + 1) FROM RelatedSubject a")
+    public Integer getAccountNextValCode();
 
 }
